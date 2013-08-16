@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title= content_for?(:title) ? yield(:title) : "Untitled"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag :application
+    = csrf_meta_tag
+    = yield(:head)
+  %body
+    #container
+      %ul
+        %li= link_to "Homepage", root_url
+        %li= link_to "new category", new_category_path
+        %li= link_to "new trailer", new_trailer_path
+        %li= link_to "trailers list", trailers_path
+
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      = content_tag :h1, yield(:title) if show_title?
+      = yield

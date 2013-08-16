@@ -1,4 +1,6 @@
 class TrailersController < ApplicationController
+  layout 'admin'
+
   # GET /trailers
   # GET /trailers.json
   def index
