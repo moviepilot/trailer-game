@@ -1,2 +1,2 @@
-# = require 'answer_feedback_screen'
+# = require './answer_feedback_screen'
 class TimeoutScreen extends AnswerFeedbackScreen

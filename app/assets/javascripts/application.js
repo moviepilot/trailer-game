@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require backbone
-//= require_tree models
-//= require_tree views
+//= require_tree ./models
+//= require_tree ./views
 //= require_self
