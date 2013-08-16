@@ -29,6 +29,17 @@ class @NameInputScreen extends Backbone.View
     li = "<li data-player-index=#{index}>#{player.get('name')} (player id: #{index})</li>"
     $('.players').append li
 
+    Controllers.startPollingStates @checkIfGameButtonPressed
+
+  checkIfGameButtonPressed: (index, state) =>
+    player = gameView.gameState.players.get index
+    return unless player
+
+    if state.buttons[16] is 1
+      Controllers.stopPollingPlayers = true
+      Controllers.stopPollingStates = true
+      @trigger "gamepadButtonPressed"
+
   renderCategories: =>
     select = "<select id='category-select'>"
 
