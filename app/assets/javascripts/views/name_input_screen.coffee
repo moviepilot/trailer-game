@@ -16,7 +16,7 @@ class @NameInputScreen extends Backbone.View
 
   render: ->
     @$el.append '
-      <img src="assets/players.png" /><br/>
+      <ul class="players"></ul>
     '
 
     button = @$el.append('<button>Start!</button>')
