@@ -17,5 +17,7 @@ class @GameView extends Backbone.View
     @gameState = {}
 
 
+    new NameInputScreen()
+
   render: ->
     super
