@@ -1,7 +1,5 @@
 TrailerGame::Application.routes.draw do
   resources :trailers
-
-
   resources :categories
 
   # The priority is based upon order of creation:
