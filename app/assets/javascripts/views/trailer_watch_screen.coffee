@@ -38,8 +38,13 @@ src='https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&controls=0&modestbrand
 frameborder='0' allowfullscreen>")
     @$el.append(videoEl)
 
-    countdownEl = $('<div></div>')
+    countdownEl = $('<div class="countdown"></div>')
     @$el.append(countdownEl)
     countdownView = new CountdownView @timeoutMilliseconds,
       el: countdownEl
     countdownView.render()
+    $('#logo').hide()
+
+  remove: ->
+    super
+    $('#logo').show()

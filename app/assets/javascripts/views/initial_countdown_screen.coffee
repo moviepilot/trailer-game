@@ -20,7 +20,7 @@ class @InitialCountdownScreen extends Backbone.View
 
   render: ->
     super
-    countdownEl = $('<div></div>')
+    countdownEl = $('<div class="countdown"></div>')
     @$el.append(countdownEl)
     countdownView = new CountdownView @timeoutMilliseconds,
       el: countdownEl

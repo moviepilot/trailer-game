@@ -5,7 +5,7 @@ class @CountdownView extends Backbone.View
   constructor: (@timeout, options) ->
     super options
     @startTime = new Date
-    @interval = setInterval (=> @updateCountdown()), 100
+    @interval = setInterval (=> @updateCountdown()), 200
     setTimeout (=> clearInterval(@interval)), timeout
 
   updateCountdown: ->
