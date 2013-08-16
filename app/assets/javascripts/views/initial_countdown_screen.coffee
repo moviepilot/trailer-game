@@ -6,4 +6,4 @@ class @InitialCountdownScreen extends Backbone.View
 
   render: ->
     super
-    @$el.text('Initial countdown goes here…')
+    @$el.html('<h2>Initial countdown goes here…</h2>')

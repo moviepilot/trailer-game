@@ -7,15 +7,15 @@ class @GameInstructionsScreen extends Backbone.View
     super
 
   render: ->
+
+    setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
+
     @$el.html '
       <p>Press the big button on your remote if you know which movie the shown trailer belongs to.</p>
       <p>Then press the correct letter.</p>
       <img src="assets/controller.png" />
     '
-
-    setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
-
-    @$el.text('Game instructions go here')
+    #@$el.html('<h2>Game instructions go here</h2>')
     setTimeout (=> @goOn()), 5000
 
   goOn: ->

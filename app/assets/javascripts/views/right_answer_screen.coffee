@@ -2,4 +2,4 @@ class @RightAnswerScreen extends AnswerFeedbackScreen
 
   render: ->
     super
-    @$el.text('The answer was right!')
+    @$el.html('<h2>The answer was right!</h2>')
