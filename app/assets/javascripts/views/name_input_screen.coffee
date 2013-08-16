@@ -28,7 +28,7 @@ class @NameInputScreen extends Backbone.View
     select = "<select id='category-select'>"
 
     # set the game state to the first category
-    gameView.gameState.categoryId = @categories.first().id
+    gameView.gameState.categoryId = @categories.first()?.id
 
     @categories.each (category) ->
       select += "<option value='#{category.get('id')}'>#{category.get('name')}</option>"
