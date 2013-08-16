@@ -1,4 +1,6 @@
+#=require 'initial_countdown_screen'
+
 class GameInstructionsScreen extends Backbone.View
   constructor: ->
     super
-    @on "gamepadButtonPressed", -> Game.goto('InitialCountdown')
+    @on "gamepadButtonPressed", -> gameView.goto(new InitialCountdownScreen)

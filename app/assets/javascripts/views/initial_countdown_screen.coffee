@@ -1,4 +1,6 @@
+#= require 'trailer_watch_screen'
+
 class InitialCountdownScreen extends Backbone.View
   constructor: ->
     super
-    @setTimeout (-> Game.goto('TrailerWatchScreen')), 3000
+    @setTimeout (-> Game.goto(new TrailerWatchScreen)), 3000
