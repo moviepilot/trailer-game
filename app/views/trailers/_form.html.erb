@@ -2,5 +2,13 @@
   <%= f.input :title %>
   <%= f.input :youtube_link %>
   <%= f.association :category %>
+
+  <%= f.input :answer0 %>
+  <%= f.input :answer1 %>
+  <%= f.input :answer2 %>
+  <%= f.input :answer3 %>
+
+  <%= f.input :correct_answer, collection: 0..3 %>
+
   <%= f.button :submit %>
 <% end %>
