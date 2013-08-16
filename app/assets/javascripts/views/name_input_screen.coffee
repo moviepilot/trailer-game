@@ -9,20 +9,25 @@ class @NameInputScreen extends Backbone.View
     @categories = new Categories()
     @categories.fetch().then @renderCategories
 
+    Controllers.startPollingPlayers @addPlayer
 
   render: ->
     @$el.append '
       <h2>Press any button on the remote to continue</h2>
       <ul class="players">
-        <li><div class="color red"></div>Player 1</li>
-        <li><div class="color yellow"></div>Player 2</li>
-        <li><div class="color green"></div>Player 3</li>
-        <li><div class="color blue"></div>Player 4</li>
       </ul>
     '
 
     button = @$el.append('<button>Start!</button>')
     button.on 'click', => gameView.goto(new GameInstructionsScreen)
+
+  addPlayer: (index, gamepad) =>
+    player = gameView.gameState.players.get index
+    return if player
+    player = new Player id: index
+    gameView.gameState.players.add player
+    li = "<li data-player-index=#{index}>#{player.get('name')} (player id: #{index})</li>"
+    $('.players').append li
 
   renderCategories: =>
     select = "<select id='category-select'>"
