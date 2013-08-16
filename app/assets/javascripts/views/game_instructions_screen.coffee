@@ -7,4 +7,4 @@ class @GameInstructionsScreen extends Backbone.View
   render: ->
     super
     @$el.text('Game instructions go here')
-    setTimeout(-> gameView.goto(new InitialCountdownScreen)), 5000
+    setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
