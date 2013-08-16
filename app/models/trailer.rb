@@ -1,6 +1,6 @@
 class Trailer < ActiveRecord::Base
 
-  attr_accessible :category_id, :title, :youtube_link, :answer0, :answer1, :answer2, :answer3, :correct_answer
+  attr_accessible :category_id, :title, :youtube_link, :answer0, :answer1, :answer2, :answer3, :correct_answer, :start_time
 
   belongs_to :category
 
