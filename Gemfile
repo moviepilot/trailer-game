@@ -11,6 +11,8 @@ group :production do
 end
 
 group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "nifty-generators"
   gem 'sqlite3'
 end

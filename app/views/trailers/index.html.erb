@@ -12,8 +12,8 @@
 
 <% @trailers.each do |trailer| %>
   <tr>
-    <td><%= trailer.title %></td>
-    <td><%= trailer.youtube_link %></td>
+    <td><%= link_to trailer.title, trailer.youtube_link, :target => '_blank' %></td>
+    <td><%= h youtube_player trailer.youtube_id %></td>
     <td><%= trailer.category_id %></td>
     <td><%= link_to 'Show', trailer %></td>
     <td><%= link_to 'Edit', edit_trailer_path(trailer) %></td>
