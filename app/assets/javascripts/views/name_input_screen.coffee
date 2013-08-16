@@ -7,7 +7,7 @@ class @NameInputScreen extends Backbone.View
     @on "gamepadButtonPressed", ->
       Controllers.stopPollingPlayers = true
       Controllers.stopPollingStates = true
-      gameView.goto(new GameInstructionsScreen)
+      gameView.goto(new InitialCountdownScreen)
 
     @categories = new Categories()
     @categories.fetch().then @renderCategories
