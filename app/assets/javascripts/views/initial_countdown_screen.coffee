@@ -1,5 +1,7 @@
 class @InitialCountdownScreen extends Backbone.View
 
+  timeoutMilliseconds: 5000
+
   constructor: ->
     super
 
@@ -14,3 +16,12 @@ class @InitialCountdownScreen extends Backbone.View
   render: ->
     super
     @$el.html('<h2>Loading…</h2>')
+    setTimeout (-> gameView.goto(new TrailerWatchScreen)), @timeoutMilliseconds
+
+  render: ->
+    super
+    countdownEl = $('<div></div>')
+    @$el.append(countdownEl)
+    countdownView = new CountdownView @timeoutMilliseconds,
+      el: countdownEl
+    countdownView.render()

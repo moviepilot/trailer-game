@@ -2,7 +2,6 @@ class @GameView extends Backbone.View
 
   goto: (view) ->
     if @currentView
-      @currentView.viewWillDisappear?()
       @currentView.remove()
 
     el = $("<div class='current-state'></div>")
@@ -11,7 +10,6 @@ class @GameView extends Backbone.View
     @currentView = view
 
     @currentView.render()
-    @currentView.viewDidAppear?()
 
   constructor: ->
     super
