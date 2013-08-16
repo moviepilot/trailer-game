@@ -15,7 +15,6 @@ class @GameInstructionsScreen extends Backbone.View
       <p>Then press the correct letter.</p>
       <img src="assets/controller.png" />
     '
-    #@$el.html('<h2>Game instructions go here</h2>')
     setTimeout (=> @goOn()), 5000
 
   goOn: ->
