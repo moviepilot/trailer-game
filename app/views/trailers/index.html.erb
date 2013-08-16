@@ -12,7 +12,7 @@
 
 <% @trailers.each do |trailer| %>
   <tr>
-    <td><%= link_to trailer.title || "link", trailer.youtube_link, :target => '_blank' %></td>
+    <td><%= link_to 'link', trailer.youtube_link, :target => '_blank' %></td>
     <td><%= youtube_player trailer.youtube_id %></td>
     <td><%= trailer.category %></td>
     <td><%= link_to 'Show', trailer %></td>

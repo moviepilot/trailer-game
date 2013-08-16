@@ -3,4 +3,8 @@ class Category < ActiveRecord::Base
 
   has_many :trailers
 
+  def to_s
+    name
+  end
+
 end
