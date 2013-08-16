@@ -12,7 +12,7 @@ class @NameInputScreen extends Backbone.View
 
   render: ->
     @$el.append '
-      <p>Press any button on the remote to continue</p>
+      <h2>Press any button on the remote to continue</h2>
       <ul class="players">
         <li><div class="color red"></div>Player 1</li>
         <li><div class="color yellow"></div>Player 2</li>

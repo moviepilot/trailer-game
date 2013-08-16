@@ -1,8 +1,10 @@
 class @GameInstructionsScreen extends Backbone.View
 
+  events:
+    'click': 'goOn'
+
   constructor: ->
     super
-    @on "gamepadButtonPressed", -> gameView.goto(new InitialCountdownScreen)
 
   render: ->
     @$el.html '
@@ -12,3 +14,9 @@ class @GameInstructionsScreen extends Backbone.View
     '
 
     setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
+
+    @$el.text('Game instructions go here')
+    setTimeout (=> @goOn()), 5000
+
+  goOn: ->
+    gameView.goto(new InitialCountdownScreen)
