@@ -1,6 +1,6 @@
-class Controllers
+class @Controllers
 
-  @startPollingPlayers: (@game) ->
+  @startPollingPlayers: (@callback = ->) ->
     return if @game.state isnt Game.STATES.WAITING_FOR_PLAYERS
 
     setTimeout @lookForPlayers, 1000
@@ -12,12 +12,8 @@ class Controllers
 
     for gamepad, index in gamepads
       if gamepad
-        @game.addPlayer index, gamepad
+        @callback index, gamepad
 
     console.log gamepads[0], gamepads[1]
 
-    #console.log gamepads
     setTimeout @lookForPlayers, 1000
-    
-
-window.Controllers = Controllers
