@@ -1,4 +1,4 @@
-class Category extends Backbone.Model
+class @Trailer extends Backbone.Model
   url: ->
     if @id
       "/trailers/#{id}"

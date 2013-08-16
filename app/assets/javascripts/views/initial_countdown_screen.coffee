@@ -2,8 +2,13 @@ class @InitialCountdownScreen extends Backbone.View
 
   constructor: ->
     super
-    setTimeout (-> gameView.goto(new TrailerWatchScreen)), 5000
+
+    categoryId = gameView.gameState.categoryId
+
+    trailers = gameView.gameState.trailers = new Trailers()
+    trailers.categoryId = categoryId
+    trailers.fetch().then -> gameView.goto(new TrailerWatchScreen)
 
   render: ->
     super
-    @$el.html('<h2>Initial countdown goes here…</h2>')
+    @$el.html('<h2>Loading…</h2>')
