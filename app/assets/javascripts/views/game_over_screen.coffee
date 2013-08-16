@@ -7,4 +7,4 @@ class @GameOverScreen extends Backbone.View
 
   render: ->
     super
-    @$el.text('Game over!')
+    @$el.html('<h2>Game over!<h2>')

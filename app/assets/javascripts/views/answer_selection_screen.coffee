@@ -10,4 +10,4 @@ class @AnswerSelectionScreen extends Backbone.View
 
   render: ->
     super
-    @$el.text('Answer selection goes here')
+    @$el.html('<h2>Answer selection goes here</h2>')
