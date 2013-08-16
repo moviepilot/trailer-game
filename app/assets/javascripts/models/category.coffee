@@ -4,3 +4,5 @@ class Category extends Backbone.Model
       "/categories/#{id}"
     else
       "/categories"
+
+window.Category = Category
