@@ -3,9 +3,11 @@ class @GameView extends Backbone.View
   goto: (view) ->
     if @currentView
       @currentView.viewWillDisappear?()
-      @currentView.$el.remove()
+      @currentView.remove()
 
-    view.setElement(@$('.current-state'))
+    el = $("<div class='current-state'></div>")
+    el.appendTo(@$el)
+    view.setElement(el)
     @currentView = view
 
     @currentView.render()
