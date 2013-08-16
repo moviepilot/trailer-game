@@ -1,0 +1,6 @@
+<%= simple_form_for @trailer do |f| %>
+  <%= f.input :title %>
+  <%= f.input :youtube_link %>
+  <%= f.association :category %>
+  <%= f.button :submit %>
+<% end %>

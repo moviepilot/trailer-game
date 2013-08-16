@@ -1,0 +1,12 @@
+<%= form_for @category do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :cover_url %><br />
+    <%= f.text_field :cover_url %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
