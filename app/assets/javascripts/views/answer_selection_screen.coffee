@@ -1,4 +1,4 @@
-class AnswerSelectionScreen extends Backbone.View
+class @AnswerSelectionScreen extends Backbone.View
 
   constructor: ->
     @setTimeout (-> gameView.goto(new TimeoutScreen)), 20000
@@ -7,3 +7,7 @@ class AnswerSelectionScreen extends Backbone.View
         gameView.goto new RightAnswerScreen
       else
         gameView.goto new WrongAnswerScreen
+
+  render: ->
+    super
+    @$el.text('Answer selection goes here')

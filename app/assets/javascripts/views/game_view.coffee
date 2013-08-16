@@ -11,14 +11,10 @@ class @GameView extends Backbone.View
     @currentView.render()
     @currentView.viewDidAppear?()
 
-
   constructor: ->
     super
     @goto(new NameInputScreen)
     @gameState = {}
-
-
-    new NameInputScreen()
 
   render: ->
     super

@@ -1,2 +1,5 @@
-# = require './answer_feedback_screen'
-class TimeoutScreen extends AnswerFeedbackScreen
+class @TimeoutScreen extends AnswerFeedbackScreen
+
+  render: ->
+    super
+    @$el.text('Timeout!')
