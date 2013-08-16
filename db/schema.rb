@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130816105534) do
+ActiveRecord::Schema.define(:version => 20130816133937) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130816105534) do
     t.string   "answer2"
     t.string   "answer3"
     t.integer  "correct_answer"
+    t.integer  "start_time"
   end
 
 end
