@@ -11,7 +11,10 @@ class Game
   start: ->
     Controllers.startPollingPlayers @
 
+  goTo: (viewClass) ->
+    view = new viewClass
+
   addPlayer: (index, gamepad) ->
-    
+
 
 window.Game = Game

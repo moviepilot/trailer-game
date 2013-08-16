@@ -18,6 +18,7 @@
 #= require_tree ./views
 #= require_self
 
-$ ->
-  new GameView
+$ =>
+  @gameView = new GameView
     el: $('body')
+  @gameView.render()
