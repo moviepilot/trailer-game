@@ -20,5 +20,5 @@
 
 $ =>
   @gameView = new GameView
-    el: $('body')
+    el: $('.game-view')
   @gameView.render()

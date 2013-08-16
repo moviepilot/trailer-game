@@ -1,9 +1,9 @@
 class AnswerSelectionScreen extends Backbone.View
 
   constructor: ->
-    @setTimeout (-> Game.goto('Timeout')), 20000
+    @setTimeout (-> gameView.goto(new TimeoutScreen)), 20000
     @on 'selected a movie', (movie) ->
       if Game.currentQuestion.correctMovie == movie
-        Game.goto 'RightAnswer'
+        gameView.goto new RightAnswerScreen
       else
-        Game.goto 'WrongAnswer'
+        gameView.goto new WrongAnswerScreen
