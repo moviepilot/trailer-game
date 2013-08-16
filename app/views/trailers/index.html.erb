@@ -12,9 +12,9 @@
 
 <% @trailers.each do |trailer| %>
   <tr>
-    <td><%= link_to trailer.title, trailer.youtube_link, :target => '_blank' %></td>
-    <td><%= h youtube_player trailer.youtube_id %></td>
-    <td><%= trailer.category_id %></td>
+    <td><%= link_to trailer.title || "link", trailer.youtube_link, :target => '_blank' %></td>
+    <td><%= youtube_player trailer.youtube_id %></td>
+    <td><%= trailer.category %></td>
     <td><%= link_to 'Show', trailer %></td>
     <td><%= link_to 'Edit', edit_trailer_path(trailer) %></td>
     <td><%= link_to 'Destroy', trailer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
