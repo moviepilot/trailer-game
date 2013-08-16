@@ -1,4 +1,9 @@
 TrailerGame::Application.routes.draw do
+
+  get "api/categories"
+  match "api/categories/:category_id/trailers" => 'api#trailers'
+  get "api/users"
+
   resources :trailers
   resources :categories
 
