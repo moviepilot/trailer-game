@@ -4,7 +4,10 @@ class @NameInputScreen extends Backbone.View
 
   constructor: ->
     super
-    @on "gamepadButtonPressed", -> gameView.goto(new GameInstructionsScreen)
+    @on "gamepadButtonPressed", ->
+      Controllers.stopPollingPlayers = true
+      Controllers.stopPollingStates = true
+      gameView.goto(new GameInstructionsScreen)
 
     @categories = new Categories()
     @categories.fetch().then @renderCategories
@@ -19,14 +22,14 @@ class @NameInputScreen extends Backbone.View
     '
 
     button = @$el.append('<button>Start!</button>')
-    button.on 'click', => gameView.goto(new GameInstructionsScreen)
+    button.on 'click', => @trigger "gamepadButtonPressed"
 
   addPlayer: (index, gamepad) =>
     player = gameView.gameState.players.get index
     return if player
     player = new Player id: index
     gameView.gameState.players.add player
-    li = "<li data-player-index=#{index}>#{player.get('name')} (player id: #{index})</li>"
+    li = "<li data-player-index=#{index}>Player #{index}</li>"
     $('.players').append li
 
     Controllers.startPollingStates @checkIfGameButtonPressed
@@ -36,8 +39,6 @@ class @NameInputScreen extends Backbone.View
     return unless player
 
     if state.buttons[16] is 1
-      Controllers.stopPollingPlayers = true
-      Controllers.stopPollingStates = true
       @trigger "gamepadButtonPressed"
 
   renderCategories: =>
