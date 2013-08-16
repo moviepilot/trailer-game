@@ -14,10 +14,10 @@ class @NameInputScreen extends Backbone.View
     @$el.append '
       <p>Press any button on the remote to continue</p>
       <ul class="players">
-        <li><div class="color red"></div>1</li>
-        <li><div class="color yellow"></div>2</li>
-        <li><div class="color green"></div>3</li>
-        <li><div class="color blue"></div>4</li>
+        <li>1 <div class="color red"></div></li>
+        <li>2 <div class="color yellow"></div></li>
+        <li>3 <div class="color green"></div></li>
+        <li>4 <div class="color blue"></div></li>
       </ul>
     '
 
