@@ -16,9 +16,7 @@ class @NameInputScreen extends Backbone.View
 
   render: ->
     @$el.append '
-      <h2>Press any button on the remote to continue</h2>
-      <ul class="players">
-      </ul>
+      <img src="assets/players.png" /><br/>
     '
 
     button = @$el.append('<button>Start!</button>')
