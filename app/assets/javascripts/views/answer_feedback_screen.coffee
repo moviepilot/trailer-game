@@ -1,4 +1,4 @@
-class AnswerFeedbackScreen extends Backbone.View
+class @AnswerFeedbackScreen extends Backbone.View
 
   constructor: ->
     super
