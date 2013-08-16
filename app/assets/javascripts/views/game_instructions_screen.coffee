@@ -8,8 +8,6 @@ class @GameInstructionsScreen extends Backbone.View
 
   render: ->
 
-    setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
-
     @$el.html '
       <img src="assets/controller2.png" />
     '

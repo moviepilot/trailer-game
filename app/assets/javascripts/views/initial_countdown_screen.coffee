@@ -7,7 +7,9 @@ class @InitialCountdownScreen extends Backbone.View
 
     trailers = gameView.gameState.trailers = new Trailers()
     trailers.categoryId = categoryId
-    trailers.fetch().then -> gameView.goto(new TrailerWatchScreen)
+    trailers.fetch().then ->
+      gameView.gameState.currentTrailerIndex = 0
+      gameView.goto(new TrailerWatchScreen)
 
   render: ->
     super
