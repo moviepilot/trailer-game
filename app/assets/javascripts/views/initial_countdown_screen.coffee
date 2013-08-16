@@ -1,0 +1,1 @@
+class InitialCountdownScreen extends Backbone.View

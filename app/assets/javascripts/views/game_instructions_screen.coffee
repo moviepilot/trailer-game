@@ -1,0 +1,1 @@
+class GameInstructionsScreen extends Backbone.View
