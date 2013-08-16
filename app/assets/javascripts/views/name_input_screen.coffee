@@ -22,9 +22,12 @@ class @NameInputScreen extends Backbone.View
 
   renderCategories: =>
     select = "<select id='category-select'>"
+
+    # set the game state to the first category
+    gameView.gameState.categoryId = @categories.first().id
     
     @categories.each (category) ->
-      select += "<option data-category-id='#{category.get('id')}'>#{category.get('name')}</option>"
+      select += "<option value='#{category.get('id')}'>#{category.get('name')}</option>"
 
     select += "</select>"
 
@@ -32,4 +35,5 @@ class @NameInputScreen extends Backbone.View
 
     $('#category-select').change @selectCategory
 
-  selectCategory: ->
+  selectCategory: (event) ->
+    gameView.gameState.categoryId = $(event.target).val()
