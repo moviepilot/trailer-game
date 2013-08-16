@@ -24,6 +24,13 @@ class @TrailerWatchScreen extends Backbone.View
       frameborder='0' allowfullscreen>
     "
 
+    countdownEl = $('<div class="countdown"></div>')
+    @$el.append(countdownEl)
+    countdownView = new CountdownView @timeoutMilliseconds,
+      el: countdownEl
+    countdownView.render()
+    $('#logo').hide()
+
   checkIfSomeonePressed: (index, state) =>
     player = gameView.gameState.players.get index
     return unless player
@@ -32,18 +39,6 @@ class @TrailerWatchScreen extends Backbone.View
 
     if pressed
       @trigger 'somebody pressed the big button', player
-
-    videoEl = $("<iframe id='ytplayer' type='text/html' width='100%' height='100%'
-src='https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0'
-frameborder='0' allowfullscreen>")
-    @$el.append(videoEl)
-
-    countdownEl = $('<div class="countdown"></div>')
-    @$el.append(countdownEl)
-    countdownView = new CountdownView @timeoutMilliseconds,
-      el: countdownEl
-    countdownView.render()
-    $('#logo').hide()
 
   remove: ->
     super

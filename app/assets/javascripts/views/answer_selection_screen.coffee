@@ -14,7 +14,7 @@ class @AnswerSelectionScreen extends Backbone.View
   render: ->
     super
     player = gameView.gameState.lastActivePlayer
-    @$el.append '<h2>Answer Player#{player.id}</h2>'
+    @$el.append "<h2>Answer Player#{player.id}</h2>"
 
     trailer = gameView.gameState.currentTrailer
 
