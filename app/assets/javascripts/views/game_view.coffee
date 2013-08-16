@@ -5,6 +5,7 @@ class @GameView extends Backbone.View
       @currentView.viewWillDisappear?()
       @currentView.$el.remove()
 
+    view.setElement(@$('.current-state'))
     @currentView = view
 
     @currentView.render()

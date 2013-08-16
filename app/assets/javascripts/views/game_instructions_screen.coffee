@@ -1,4 +1,3 @@
-
 class GameInstructionsScreen extends Backbone.View
   constructor: ->
     super
