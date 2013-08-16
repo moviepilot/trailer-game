@@ -1,6 +1,3 @@
-#= require './game_over_screen'
-#= require './trailer_watch_screen'
-
 class @AnswerFeedbackScreen extends Backbone.View
 
   constructor: ->

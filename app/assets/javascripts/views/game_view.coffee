@@ -1,5 +1,3 @@
-#= require './name_input_screen'
-
 class @GameView extends Backbone.View
 
   goto: (view) ->

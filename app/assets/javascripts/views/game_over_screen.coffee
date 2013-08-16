@@ -1,5 +1,3 @@
-#= require 'name_input_screen'
-
 class GameOverScreen extends Backbone.View
 
   constructor: ->
