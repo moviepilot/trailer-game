@@ -4,6 +4,8 @@ class Trailer < ActiveRecord::Base
 
   belongs_to :category
 
+  validates :youtube_link, :category, :correct_answer, presence: true
+
   def youtube_id
     regex = /youtube.com.*(?:\/|v=)([^&$]+)/
     if match = youtube_link.match(regex)
