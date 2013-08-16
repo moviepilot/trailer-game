@@ -13,9 +13,6 @@ class @GameInstructionsScreen extends Backbone.View
       <img src="assets/controller.png" />
     '
 
-    setTimeout (-> gameView.goto(new InitialCountdownScreen)), 5000
-
-    @$el.text('Game instructions go here')
     setTimeout (=> @goOn()), 5000
 
   goOn: ->
