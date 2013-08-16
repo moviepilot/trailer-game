@@ -1,0 +1,1 @@
+class NameInputScreen extends Backbone.View

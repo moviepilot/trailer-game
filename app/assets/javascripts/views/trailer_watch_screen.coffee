@@ -1,0 +1,1 @@
+class TrailerWatchScreen extends Backbone.View
